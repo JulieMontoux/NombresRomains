@@ -33,6 +33,16 @@ namespace NombresRomains
             Assert.Equal(new string('I', x), nombreRomainObtenu);
         }
 
+        [Theory(DisplayName ="on envoie 4")]
+
+        [InlineData(4)]
+        public void TestQuatre(int x)
+        {
+            var nombreRomainObtenu = Convertisseur.Convertir(x);
+            var iAvant = new string('I', 5 - x);
+            Assert.Equal(new string(iAvant + 'V'), nombreRomainObtenu);
+        }
+
         [Theory(DisplayName ="on envoie 6,7,8")]
 
         [InlineData(6)]
