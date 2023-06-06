@@ -30,6 +30,8 @@ namespace NombresRomains
                 return "X";
             if (nombreArabe == 50)
                 return "L";
+            if (nombreArabe == 100)
+                return "C";
             return "I";
         }
     }

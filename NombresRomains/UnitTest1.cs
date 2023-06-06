@@ -8,6 +8,7 @@ namespace NombresRomains
         [InlineData(5, "V")]
         [InlineData(10, "X")]
         [InlineData(50, "L")]
+        [InlineData(100, "C")]
         public void Test1(int nombreArabe, string nombreRomainAttendu)
         {
             var nombreRomainObtenu = Convertisseur.Convertir(nombreArabe);
