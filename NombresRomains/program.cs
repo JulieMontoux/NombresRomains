@@ -12,6 +12,8 @@ namespace NombresRomains
         {
             if (nombreArabe == 2)
                 return "II";
+            if (nombreArabe == 3)
+                return "III";
             return "I";
         }
     }
