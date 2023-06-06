@@ -56,5 +56,16 @@ namespace NombresRomains
             var iTerminaux = new string('I', x-5);
             Assert.Equal(new string('V'+ iTerminaux), nombreRomainObtenu);
         }
+
+        [Theory(DisplayName ="on envoie 9")]
+
+        [InlineData(9)]
+        [InlineData(10)]
+        public void TestNeuf(int x)
+        {
+            var nombreRomainObtenu = Convertisseur.Convertir(x);
+            var iAvant= new string('I', 10 - x);
+            Assert.Equal(new string(iAvant + 'X'), nombreRomainObtenu);
+        }
     }
 }
