@@ -10,6 +10,8 @@ namespace NombresRomains
     {
         public static string Convertir(int nombreArabe)
         {
+            if (nombreArabe == 1)
+                return "I";
             if (nombreArabe == 2)
                 return "II";
             if (nombreArabe == 3)
@@ -28,11 +30,21 @@ namespace NombresRomains
                 return "IX";
             if (nombreArabe == 10)
                 return "X";
+            if (nombreArabe == 11)
+                return "XI";
             if (nombreArabe == 50)
                 return "L";
             if (nombreArabe == 100)
                 return "C";
-            return "I";
+            if (nombreArabe == 500)
+                return "D";
+            if (nombreArabe == 1000)
+                return "M";
+            if (nombreArabe == 5000)
+                return "V";
+
+            //exception pour tout nombre qui n'est pas traduit
+            else throw new Exception();
         }
     }
 }
