@@ -14,6 +14,10 @@ namespace NombresRomains
                 return "II";
             if (nombreArabe == 3)
                 return "III";
+            if (nombreArabe == 4)
+                return "IV";
+            if (nombreArabe == 5)
+                return "V";
             return "I";
         }
     }
