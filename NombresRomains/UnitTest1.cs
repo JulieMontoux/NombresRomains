@@ -19,5 +19,30 @@ namespace NombresRomains
 
             Assert.Equal(nombreRomainAttendu, nombreRomainObtenu);
         }
+
+        [Theory(DisplayName = "on envoie 1, 2, 3")]
+
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+
+        public void TestUnites(int x)
+        {
+            var nombreRomainObtenu = Convertisseur.Convertir(x);
+
+            Assert.Equal(new string('I', x), nombreRomainObtenu);
+        }
+
+        [Theory(DisplayName ="on envoie 6,7,8")]
+
+        [InlineData(6)]
+        [InlineData(7)]
+        [InlineData(8)]
+        public void TestPlusCinqUnites(int x)
+        {
+            var nombreRomainObtenu = Convertisseur.Convertir(x);
+            var iTerminaux = new string('I', x-5);
+            Assert.Equal(new string('V'+ iTerminaux), nombreRomainObtenu);
+        }
     }
 }
