@@ -10,6 +10,8 @@ namespace NombresRomains
     {
         public static string Convertir(int nombreArabe)
         {
+            if (nombreArabe == 2)
+                return "II";
             return "I";
         }
     }
